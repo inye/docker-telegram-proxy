@@ -40,6 +40,6 @@ EXPOSE 1080
 
 RUN useradd $DANTE_USERNAME && echo "$DANTE_USERNAME:$DANTE_PASSWORD" | chpasswd
 
-CMD sockd -f $CFGFILE -p $PIDFILE -N $WORKERS
+CMD exec sockd -f $CFGFILE -p $PIDFILE -N $WORKERS
 
 
